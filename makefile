@@ -1,10 +1,14 @@
-all:
-	xelatex report
-	bibtex report
-	xelatex report
-	xelatex report
-	rm report.out 
-	rm report.bbl
-	rm report.aux
-	rm report.log
-	rm report.blg
+FileName=report
+
+report:
+	xelatex $(FileName)
+	bibtex $(FileName)
+	xelatex $(FileName)
+	xelatex $(FileName)
+
+clean:
+	rm $(FileName).out 
+	rm $(FileName).bbl
+	rm $(FileName).aux
+	rm $(FileName).log
+	rm $(FileName).blg
